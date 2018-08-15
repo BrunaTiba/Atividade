@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <array name="hints">
+    <item> Digite seu nome </item>
+    <item> Digite seu sobrenome </item>
+    <item> Digite sua data de nascimento </item>
+    <item> Digite sua cidade </item>
+
+    </array>
+</resources>

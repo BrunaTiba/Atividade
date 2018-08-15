@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:id="@+id/linear_Layout"
         android:layout_width="match_parent"
@@ -12,4 +16,19 @@
         android:orientation="vertical">
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearResultado"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewResultado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    </FrameLayout>
+
 </ScrollView>

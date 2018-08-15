@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <array name="hints">
+
+    <item>Type your name</item>
+    <item>Type your surname</item>
+    <item>Type your date of birth</item>
+     <item>Type your City</item>
+
+</array>
+
+</resources>
