@@ -12,7 +12,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private String[] hints;
-   //private int qtdViewAdd = 15;
+    private String[] tags;
+
+    //private int qtdViewAdd = 15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,19 +28,13 @@ public class MainActivity extends AppCompatActivity {
             EditText editText = new EditText( this );
             editText.setId( i );
             editText.setHint(hints[i]);
+
+
+            editText.setTag(tags[i]);
+
             linearLayout.addView( editText );
         }
 
-       // LinearLayout linearLayout = findViewById(R.id.linear_Layout);
-
-        //for (int i = 0 ; i < qtdViewAdd; i++) {
-
-        //    EditText editText = new EditText(this);
-        //   editText.setId(i);
-         //   editText.setHint("Digite seu nome:");
-         //   linearLayout.addView(editText);
-
-       // }
 
        Button btEnviar = new Button(this);
        btEnviar.setText("Enviar");

@@ -9,4 +9,16 @@
         <item> Digite sua cidade </item>
 
     </array>
+
+
+    <array name="tags">
+        <item>nome</item>
+        <item>sobrenome</item>
+        <item>nascimento</item>
+        <item>cpf</item>
+        <item>rg</item>
+        <item>estado</item>
+        <item>cidade</item>
+        <item>bairro</item>
+    </array>
 </resources>

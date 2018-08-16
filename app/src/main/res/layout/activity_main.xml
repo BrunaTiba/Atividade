@@ -17,17 +17,17 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearResultado"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textViewResultado"
+        <LinearLayout
+            android:id="@+id/linearResultado"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewResultado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
 
     </FrameLayout>
 
