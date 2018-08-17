@@ -12,10 +12,9 @@ public class BDListaClientes
     public BDListaClientes (){
         clientes = new ArrayList<>();
     }
-    public  void inserirClientes (Cliente cliente){
-        clientes.add(cliente);
-    }
-    public List<Cliente> recuperarClientes (){
-        return clientes;
-    }
+    public void inserirCliente(Cliente cliente){
+        clientes.add(cliente);}
+
+    public List<Cliente> recuperarClientes () {
+        return clientes;}
 }
