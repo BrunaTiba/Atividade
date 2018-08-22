@@ -18,4 +18,6 @@
         <item>cidade</item>
 
     </array>
+
+    <string name="nome">Digite seu nome</string>
 </resources>

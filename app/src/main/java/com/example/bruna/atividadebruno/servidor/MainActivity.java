@@ -1,4 +1,4 @@
-package com.example.bruna.atividadebruno;
+package com.example.bruna.atividadebruno.servidor;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +10,12 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.bruna.atividadebruno.R;
 import com.example.bruna.atividadebruno.bancodedados.BDListaClientes;
 import com.example.bruna.atividadebruno.modal.Cliente;
+import com.example.bruna.atividadebruno.modal.ConfigurarCampo;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private String[] tags;
     public static BDListaClientes listaClientes;
 
+    public List<ConfigurarCampo> campos;
 
 
     @Override
@@ -26,27 +31,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         listaClientes = new BDListaClientes();
-        hints = getResources().getStringArray( R.array.hints );
-        tags= getResources().getStringArray(R.array.tags);
+        hints = getResources().getStringArray(R.array.hints);
+        tags = getResources().getStringArray(R.array.tags);
 
         setContentView(R.layout.activity_main);
 
-        LinearLayout linearLayout = findViewById( R.id.linear_Layout);
+        LinearLayout linearLayout = findViewById(R.id.linear_Layout);
 
-        for (int i = 0; i <hints.length; i++){
+        for (int i = 0; i < hints.length; i++) {
             EditText editText = new EditText(this);
             editText.setId(i);
             editText.setHint(hints[i]);
             editText.setTag(tags[i]);
-            linearLayout.addView( editText );
+            linearLayout.addView(editText);
         }
 
         final int childCount = linearLayout.getChildCount();
 
 
-       Button btEnviar = new Button(this);
-       btEnviar.setText("Enviar");
-       btEnviar.setOnClickListener(new View.OnClickListener() {
+        Button btEnviar = new Button(this);
+        btEnviar.setText("Enviar");
+        btEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -60,12 +65,12 @@ public class MainActivity extends AppCompatActivity {
 
                 Cliente cliente = new Cliente();
 
-                for(int i = 0 ; i < hints.length; i++){
+                for (int i = 0; i < hints.length; i++) {
                     EditText editText = findViewById(i);
 
-                    if(!TextUtils.isEmpty(editText.getText().toString())){
+                    if (!TextUtils.isEmpty(editText.getText().toString())) {
                         resultado += editText.getText().toString() + "\n";
-                        cliente.setarCampo(editText.getTag().toString(),editText.getText().toString());
+                        cliente.setarCampo(editText.getTag().toString(), editText.getText().toString());
                         editText.setText("");
                     }
                 }
@@ -75,17 +80,17 @@ public class MainActivity extends AppCompatActivity {
                 ((TextView) findViewById(R.id.textViewResultado)).setText(resultado);
 
             }
-       });
+        });
 
-        ((Button)findViewById(R.id.btClientes)).setOnClickListener(new View.OnClickListener() {
+        ((Button) findViewById(R.id.btClientes)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(MainActivity.this,Cliente.class);
+                Intent it = new Intent(MainActivity.this, Cliente.class);
                 startActivity(it);
             }
         });
 
-        ((Button)findViewById(R.id.btVoltar)).setOnClickListener(new View.OnClickListener(){
+        ((Button) findViewById(R.id.btVoltar)).setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -99,4 +104,11 @@ public class MainActivity extends AppCompatActivity {
 
         linearLayout.addView(btEnviar);
     }
+
+    //private List<ConfigurarCampo> initCampos() {
+
+      ///  ConfigurarCampo nome = new ConfigurarCampo();
+        //nome.setMint(getResources().getString(R.string.nome));
+        //nome.setTag(1);
+   // }
 }

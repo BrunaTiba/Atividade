@@ -1,4 +1,4 @@
-package com.example.bruna.atividadebruno;
+package com.example.bruna.atividadebruno.servidor;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.bruna.atividadebruno.bancodedados.BDListaClientes;
+import com.example.bruna.atividadebruno.R;
 import com.example.bruna.atividadebruno.modal.Cliente;
 
 import java.util.List;
