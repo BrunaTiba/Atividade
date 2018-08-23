@@ -20,4 +20,8 @@
     </array>
 
     <string name="nome">Digite seu nome</string>
+    <string name="sobrenome">Digite seu sobrenome</string>
+    <string name="dataNascimento">Digite sua data de nascimento</string>
+    <string name="cidade">Digite sua cidade</string>
+
 </resources>

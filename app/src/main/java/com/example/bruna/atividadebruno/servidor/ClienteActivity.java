@@ -34,9 +34,9 @@ public class ClienteActivity extends AppCompatActivity {
 
             ((TextView)v.findViewById(R.id.tvSobrenome)).setText(cliente.getSobrenome());
 
-            ((TextView)v.findViewById(R.id.tvNascimento)).setText(cliente.getDataNascimento());
+            ((TextView)v.findViewById(R.id.tvDatadeNascimento)).setText(cliente.getDataNascimento());
 
-            ((TextView)v.findViewById(R.id.tvCpf)).setText(cliente.getCpf());
+            ((TextView)v.findViewById(R.id.tvCidade)).setText(cliente.getCidade());
 
              ((LinearLayout)findViewById(R.id.llContainerClientes)).addView(v);
 
